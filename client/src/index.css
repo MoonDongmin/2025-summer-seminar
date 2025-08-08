@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  color: #fff;
+}
+
+body {
+  /* 우주 테마와 조화되는 기본 배경 */
+  background-color: #0a0b1e;
+  overflow-x: hidden;
+}
+
+/* 우주 애니메이션 효과 */
+@keyframes moveStars {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50px, -50px);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: rotate(30deg) scale(2) translateX(-100px);
+  }
+  100% {
+    transform: rotate(30deg) scale(2) translateX(100px);
+  }
+}
+
+@keyframes nebulaPulse {
+  0% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+}
+
+/* 스크롤바 스타일링 (우주 테마) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 11, 30, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
+}
