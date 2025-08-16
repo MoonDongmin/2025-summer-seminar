@@ -3,7 +3,7 @@ import wisoftLogo from "/wisoft.png";
 export function Landing() {
   return (
     <section className="flex-1 flex flex-col items-center justify-center p-8 relative">
-      {/* 우주 홀로그램 효과를 위한 오버레이 */}
+      {/* 우주 홀로그램 효과를 위한 오버레이 (애니메이션 제거) */}
       <div className="absolute inset-0 pointer-events-none">
         <div 
           className="absolute inset-0 opacity-5"
@@ -15,7 +15,7 @@ export function Landing() {
               rgba(56, 189, 248, 0.1) 2px,
               rgba(56, 189, 248, 0.1) 4px
             )`,
-            animation: 'drift 8s linear infinite'
+            // 애니메이션 제거하여 성능 개선
           }}
         />
       </div>
@@ -23,8 +23,8 @@ export function Landing() {
       <div className="space-y-8 relative z-10">
         <div className="flex items-center justify-center">
           <div className="relative group">
-            {/* 로고 주변 우주 파티클 효과 */}
-            <div className="absolute -inset-4 rounded-full opacity-30 blur-sm bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-400 animate-pulse" />
+            {/* 로고 주변 우주 파티클 효과 (애니메이션 제거) */}
+            <div className="absolute -inset-4 rounded-full opacity-30 blur-sm bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-400" />
             <img
               src={wisoftLogo}
               alt="WISOFT logo"
@@ -33,18 +33,7 @@ export function Landing() {
                         hover:drop-shadow-[0_0_3rem_rgba(99,102,241,0.6)]
                         hover:scale-105 group-hover:rotate-3"
             />
-            {/* 홀로그램 스캔 라인 효과 */}
-            <div 
-              className="absolute inset-0 opacity-20 pointer-events-none"
-              style={{
-                background: `linear-gradient(to bottom, 
-                          transparent 0%, 
-                          rgba(56, 189, 248, 0.3) 50%, 
-                          transparent 100%)`,
-                transform: 'translateY(-100%)',
-                animation: 'drift 4s ease-in-out infinite'
-              }}
-            />
+            {/* 홀로그램 스캔 라인 효과 제거로 성능 개선 */}
           </div>
         </div>
 
@@ -73,7 +62,7 @@ export function Landing() {
             Documentation
           </a>
           <a
-            href="https://github.com/wrtnlabs/agentica"
+            href="https://github.com/MoonDongmin/2025-summer-seminar"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 border border-purple-500/50 bg-transparent text-purple-200 rounded-lg 
