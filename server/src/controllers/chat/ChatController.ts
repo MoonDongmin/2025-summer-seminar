@@ -67,13 +67,12 @@ export class MyChatController {
             },
           }),
         },
-        // {
-        //   name: "GoogleCalendar Connector",
-        //   protocol: "class",
-        //   application: typia.llm.application<GoogleCalendarService, "chatgpt">(),
-        //   execute: new GoogleCalendarService(),
-        // }
       ],
+      config: {
+        retry: 3,
+        locale: "ko-KR",
+        timezone: "Asia/Seoul",
+      },
     });
 
     const service: AgenticaRpcService<"chatgpt"> = new AgenticaRpcService({
